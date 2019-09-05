@@ -1,3 +1,5 @@
+#problem link: https://softuni.bg/trainings/resources/officedocument/39816/exercise-problem-descriptions-programming-basics-with-python-april-2019/2328
+
 trip_cost = int(input())
 money = float(input())
 
