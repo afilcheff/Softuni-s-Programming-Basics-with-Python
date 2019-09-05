@@ -1,18 +1,24 @@
-bad_grades = int(input())
+max_bad_grades = int(input())
 
 task = input()
-count_task = 0
-
+bad_grades = 0
+problem_count = 0
+score = 0
 
 while not task == 'Enough':
     grade = int(input())
+    score += grade
     if grade <= 4:
         bad_grades += 1
-        if bad_grades > 1:
+        if bad_grades >= max_bad_grades:
+            print(f'You need a break, {bad_grades} poor grades.')
             break
+    problem_count += 1
     task = input()
-    count_task += 1
 
+Average_score = score / problem_count
 
 if task == 'Enough':
-    print('1')
+    print(f'Average score: {Average_score:.2f}')
+    print(f'Number of problems: {problem_count}')
+    print(f'Last problem: {task}')
