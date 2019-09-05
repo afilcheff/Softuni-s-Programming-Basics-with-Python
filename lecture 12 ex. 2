@@ -1,0 +1,18 @@
+bad_grades = int(input())
+
+task = input()
+count_task = 0
+
+
+while not task == 'Enough':
+    grade = int(input())
+    if grade <= 4:
+        bad_grades += 1
+        if bad_grades > 1:
+            break
+    task = input()
+    count_task += 1
+
+
+if task == 'Enough':
+    print('1')
