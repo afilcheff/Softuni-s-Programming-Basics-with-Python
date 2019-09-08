@@ -10,13 +10,12 @@ for num in range(n):
     sum_numbers += num
     if num > max_number:
         max_number = num
+    counter += 1
     if counter == n:
         if sum_numbers / 2 == max_number:
             print('Yes')
-            print(sum_numbers)
+            print(max_number)
         else:
             print('No')
-            diff = abs(max_number - sum_numbers)
-            print({diff})
-    counter += 1
-
+            diff = abs(2 * max_number - sum_numbers)
+            print(diff)
